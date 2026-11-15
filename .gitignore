@@ -1,0 +1,67 @@
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# All datasets stay local, including future subdirectories
+/data/**
+!/data/**/
+!/data/**/.gitkeep
+!/data/**/README.md
+
+# Dataset formats are excluded anywhere in the project
+*.csv
+*.tsv
+*.parquet
+*.feather
+*.arrow
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.joblib
+*.sqlite
+*.sqlite3
+*.db
+
+# Generated browser datasets stay local; educational content can be tracked
+/web/public/data/*
+!/web/public/data/.gitkeep
+!/web/public/data/README.md
+!/web/public/data/guidance.json
+
+# Fitted models stay local
+/artifacts/models/*
+!/artifacts/models/.gitkeep
+
+# Frontend dependencies and generated builds
+node_modules/
+/web/dist/
+/web/.vite/
+*.tsbuildinfo
+
+# Local secrets and operating-system files
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+*.log
+
+# Local reference notes
+/docs/references/**/*.md
+/docs/reference/**/*.md
