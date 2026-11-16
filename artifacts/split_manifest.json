@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-11-15T23:42:42.599174+00:00",
+  "seed": 42,
+  "shuffle_method": "numpy.random.default_rng(42).permutation(sorted_participant_ids)",
+  "numpy_version_at_creation": "2.5.5",
+  "partitions": {
+    "train": [
+      "0609b",
+      "0620a",
+      "0623a",
+      "0624a",
+      "0624b",
+      "0626b",
+      "0627a",
+      "0714b",
+      "0717b",
+      "0721b",
+      "0722a",
+      "0728b"
+    ],
+    "validation": [
+      "0613b",
+      "0620b",
+      "0714a",
+      "0723b"
+    ],
+    "test": [
+      "0610b",
+      "0626a",
+      "0715a",
+      "0722b"
+    ]
+  },
+  "source": {
+    "title": "High-Altitude Pilot Physiological Monitoring Dataset: Respiratory Performance and SpO\u2082 Analysis",
+    "url": "https://doi.org/10.6084/m9.figshare.29947679",
+    "metadata_url": "https://api.figshare.com/v2/articles/29947679",
+    "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12886808/",
+    "version": 1,
+    "license": {
+      "value": 1,
+      "name": "CC BY 4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "publisher_metadata_available": true
+  },
+  "sources": [
+    {
+      "participant_id": "0609b",
+      "relative_path": "0609b.csv",
+      "row_count": 8021,
+      "sha256": "3be9fcc49cdfb22d3918c994f4873644e1e391b7599a11f8b3b851d3a19bceb7"
+    },
+    {
+      "participant_id": "0610b",
+      "relative_path": "0610b.csv",
+      "row_count": 7205,
+      "sha256": "06cca5f5c5c6ce926f4433833d540162a6716b9982c04572723f6b52e4425049"
+    },
+    {
+      "participant_id": "0613b",
+      "relative_path": "0613b.csv",
+      "row_count": 10436,
+      "sha256": "b982f232825e83f99ad9dcd4b082a14eebb987f4bc5ff7795dfcb3244f78a1ef"
+    },
+    {
+      "participant_id": "0620a",
+      "relative_path": "0620a.csv",
+      "row_count": 6979,
+      "sha256": "5e1709858169cd1a52c191cc7057f56e8c98508c7bb5dcd9079b87b207e73ec2"
+    },
+    {
+      "participant_id": "0620b",
+      "relative_path": "0620b.csv",
+      "row_count": 8995,
+      "sha256": "5d00882bd5f5107adbf3353b679ce21b23dab10295d0550c41899153761a7c64"
+    },
+    {
+      "participant_id": "0623a",
+      "relative_path": "0623a.csv",
+      "row_count": 8951,
+      "sha256": "85352db9cf8d66154ba68bf008a0c9f0f36e1068d06d2e26990e6337ccd4f19e"
+    },
+    {
+      "participant_id": "0624a",
+      "relative_path": "0624a.csv",
+      "row_count": 7936,
+      "sha256": "7ae234643e8cdb2222e27b284353200f7dc5fe2c788b92717dbc5d3e85c6b99a"
+    },
+    {
+      "participant_id": "0624b",
+      "relative_path": "0624b.csv",
+      "row_count": 8453,
+      "sha256": "841ff9dec51bfa49ed8abd17617de9bde63b4db3b1a1782f508e59da4e1ce497"
+    },
+    {
+      "participant_id": "0626a",
+      "relative_path": "0626a.csv",
+      "row_count": 7601,
+      "sha256": "cd85c99f31c6bf275a80012e4663bf478b40630f47907a633a3a4f95c2a220d9"
+    },
+    {
+      "participant_id": "0626b",
+      "relative_path": "0626b.csv",
+      "row_count": 8176,
+      "sha256": "fadb2adcb584633071d91299519e2f29fd4f93eab0a82b7024fb53d00d360039"
+    },
+    {
+      "participant_id": "0627a",
+      "relative_path": "0627a.csv",
+      "row_count": 7372,
+      "sha256": "9864f6ce55e0ec577ec52cd9d5970c1c2c77cec2be8b3b7c308621f4cac36820"
+    },
+    {
+      "participant_id": "0714a",
+      "relative_path": "0714a.csv",
+      "row_count": 7078,
+      "sha256": "0a63b5c6bcd22f9731445c63f5a3623844b50bbc5611d1ab731c21e1c8ae07d9"
+    },
+    {
+      "participant_id": "0714b",
+      "relative_path": "0714b.csv",
+      "row_count": 8046,
+      "sha256": "98ef03aa4a485d196d9c922e7c821b6b0dd18af476c6b13a49ff5c6c008f0e13"
+    },
+    {
+      "participant_id": "0715a",
+      "relative_path": "0715a.csv",
+      "row_count": 6663,
+      "sha256": "beb9267131fdc7dfef4e4e21280049316ceb681026536122894954b14bc11574"
+    },
+    {
+      "participant_id": "0717b",
+      "relative_path": "0717b.csv",
+      "row_count": 7847,
+      "sha256": "8b11fe9476a9b0b824d02f34ee92a2eccd3144d2fa2004bae02af060ed1a8acf"
+    },
+    {
+      "participant_id": "0721b",
+      "relative_path": "0721b.csv",
+      "row_count": 9082,
+      "sha256": "7f59db47ce5a8222ffc3a1a719deaa1c318036ce69a471373a652d429ebb62e9"
+    },
+    {
+      "participant_id": "0722a",
+      "relative_path": "0722a.csv",
+      "row_count": 6940,
+      "sha256": "44e5582f6dccbf7f95ed22a45ae5897758aeb09577c9ebe8a3f666986bcf2aa5"
+    },
+    {
+      "participant_id": "0722b",
+      "relative_path": "0722b.csv",
+      "row_count": 7806,
+      "sha256": "c5b37ab9f65ecb579e254856eaeef7c2d5a5129985c9bab2f386a871d3da1432"
+    },
+    {
+      "participant_id": "0723b",
+      "relative_path": "0723b.csv",
+      "row_count": 6220,
+      "sha256": "0f6f90c67cfcdb97ff7206e7144a962fb1ff38d674cbe86afa20e388e83a4f63"
+    },
+    {
+      "participant_id": "0728b",
+      "relative_path": "0728b.csv",
+      "row_count": 8773,
+      "sha256": "8a6399de9d25333f5c40bc9cf37493a99bcf32cc7d15928b29ef4215a532bef1"
+    }
+  ]
+}

@@ -8,3 +8,5 @@ Initialize the frontend here using an appropriate static web stack. `src/` holds
 2. **Evidence:** data origin, actual evaluation results, persistence comparison, limitations and references.
 
 Read `../docs/data-contract.md` before integrating the analysis exports. Keep the product clearly labeled as historical research-data replay. Establish a working public deployment early.
+
+The assessment journey, three model-derived insights, provenance labels, context defaults, review rules and summary acceptance cases are specified in `../docs/assessment-workflow.md`. The five educational guidance cards and reviewed source metadata are already bundled in `public/data/guidance.json`. Numerical playback export and browser behavior still need implementation.

@@ -1,0 +1,7 @@
+# Preserve the exact bytes referenced by publisher and experiment checksums.
+# These files intentionally contain a mix of original CRLF and generated LF.
+/data/raw/** -text
+/data/processed/forecasting/** -text
+/data/processed/predictions/** -text
+/artifacts/models/** -text
+/artifacts/*.json -text

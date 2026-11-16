@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-11-15",
+  "review_status": "Source-checked educational prototype content; not clinically reviewed or mission approved",
+  "available_independently_of_forecast": true,
+  "sources": [
+    {
+      "id": "fda-pulse-oximeter-basics",
+      "title": "Pulse Oximeter Basics",
+      "publisher": "U.S. Food and Drug Administration",
+      "url": "https://www.fda.gov/consumers/consumer-updates/pulse-oximeter-basics",
+      "reviewed_on": "2026-11-15",
+      "source_updated_on": null,
+      "applicable_sections": ["What is a pulse oximeter?", "Using a pulse oximeter"],
+      "applicability": "General terrestrial consumer information, not a microgravity measurement procedure or mission-specific treatment protocol."
+    },
+    {
+      "id": "nasa-hypoxia",
+      "title": "Risk of Hypoxia",
+      "publisher": "NASA Human Research Program",
+      "url": "https://www.nasa.gov/reference/risk-of-hypoxia/",
+      "reviewed_on": "2026-11-15",
+      "source_updated_on": "2025-05-16",
+      "applicable_sections": ["What are the top risks?", "What can be done about it?", "Did you know?"],
+      "applicability": "Exploration-atmosphere research context; no validation or clinical alert rules for this prototype."
+    },
+    {
+      "id": "nasa-distance-from-earth",
+      "title": "Hazard: Distance From Earth",
+      "publisher": "NASA Human Research Program",
+      "url": "https://www.nasa.gov/hrp/hazard-distance-from-earth/",
+      "reviewed_on": "2026-11-15",
+      "source_updated_on": "2024-08-01",
+      "applicable_sections": ["Distance From Earth overview"],
+      "applicability": "Operational context for communication delays and self-sufficiency, not a diagnostic algorithm or treatment procedure."
+    }
+  ],
+  "cards": [
+    {
+      "id": "understand-spo2",
+      "title": "Understand SpO₂",
+      "provenance": "sourced_guidance",
+      "body": "SpO₂ estimates blood oxygen saturation as a percentage. A pulse oximeter may also display pulse rate. Consider the reading alongside symptoms and other information; the number alone does not identify a cause.",
+      "source_ids": ["fda-pulse-oximeter-basics"],
+      "reviewed_on": "2026-11-15",
+      "applicability": "General terrestrial explanation. The demo shows released chamber-study records; its separate model forecast estimates a future 30-second average."
+    },
+    {
+      "id": "measurement-quality",
+      "title": "Review measurement quality",
+      "provenance": "sourced_guidance",
+      "body": "Movement, circulation, skin pigmentation and temperature can affect readings. Consult the instrument's own instructions and record concerns about the measurement. An apparently steady value does not establish that the instrument is accurate.",
+      "source_ids": ["fda-pulse-oximeter-basics"],
+      "reviewed_on": "2026-11-15",
+      "applicability": "General device information, without posture-dependent instructions. The replay cannot assess individual original sensor reliability; concerns entered here are user reports."
+    },
+    {
+      "id": "symptoms-trends",
+      "title": "Consider symptoms and trends",
+      "provenance": "sourced_guidance",
+      "body": "Changes over time and how you feel provide context for a reading. Some people with low oxygen levels have few apparent symptoms. Record symptoms and concerns; this prototype does not determine their cause.",
+      "source_ids": ["fda-pulse-oximeter-basics"],
+      "reviewed_on": "2026-11-15",
+      "applicability": "Educational context, not a validated triage rule. Symptom notes are user-entered and were not observed alongside the HAPP records."
+    },
+    {
+      "id": "spaceflight-context",
+      "title": "Why oxygen matters in spaceflight",
+      "provenance": "sourced_guidance",
+      "body": "NASA studies how reduced-pressure exploration atmospheres may affect oxygenation. Its overview describes the associated hypoxia risk as relatively low. Greater distance from Earth can delay communication and increase the importance of local information and preparation.",
+      "source_ids": ["nasa-hypoxia", "nasa-distance-from-earth"],
+      "reviewed_on": "2026-11-15",
+      "applicability": "Research and operational background. HAPP contains terrestrial chamber records, not spacecraft cabin measurements or astronaut telemetry. NASA has not approved this prototype."
+    },
+    {
+      "id": "consultation-help",
+      "title": "Prepare for consultation and access help",
+      "provenance": "sourced_guidance",
+      "body": "Record readings and their times together with symptoms and context for discussion with a health professional. Seek available medical assistance for serious or worsening symptoms; do not wait for a forecast.",
+      "source_ids": ["fda-pulse-oximeter-basics"],
+      "reviewed_on": "2026-11-15",
+      "applicability": "General educational information. No mission-approved procedure has been supplied to this prototype. Summary download does not contact medical support or specify treatment."
+    }
+  ]
+}

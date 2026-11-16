@@ -1,0 +1,21 @@
+{
+  "verified_at_utc": "2026-11-16T00:35:00.045525+00:00",
+  "status": "pass",
+  "stage": "workflow/content specification; frontend and playback export pending",
+  "saved_test_forecasts_checked": 5786,
+  "maximum_contribution_reconstruction_error_percentage_points": 1.4210854715202004e-14,
+  "issue_time_reading_comparisons_checked": 5786,
+  "guidance_cards": 5,
+  "guidance_sources": 3,
+  "guidance_reference_integrity": "pass; source content was separately reviewed against the cited pages",
+  "reference_contract_scenarios": "warm-up, issue-age/window anchoring, expiry, future exclusion, missing forecast/history, rounding and isolated default/draft examples passed",
+  "browser_integration_checks": "Not run: no frontend is implemented. The specification includes acceptance cases for prompts, missing observed history, context isolation, model invariance and summaries.",
+  "preserved_artifact_sha256": {
+    "artifacts\\models\\ridge_pipeline.pkl": "1d4829d96acbedf440fd318475c050b2ceb647b1867008f824a768c3fe458048",
+    "artifacts\\split_manifest.json": "f846c7fee5071c1a2d7c14330e95cafb3100624ae73d55ccefc6f169a1a27c28",
+    "artifacts\\metrics.json": "f5651102d846b72bf3d5bca430bc56ce390183097841f373da0208cbaa11dead",
+    "artifacts\\model_selection.json": "2ef45fb3e725a4f7ba3ba54120a7701f351b8fe91cdf240161e8ba4311ee668b",
+    "artifacts\\forecast_preparation.json": "5c7288a08066c848ec83e5be668d82b4c888b7eecb84e8bbc95cc4dedff0acce"
+  },
+  "model_fitting_or_selection_performed": false
+}

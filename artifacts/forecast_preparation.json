@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-11-15T23:43:50.594429+00:00",
+  "split_manifest": "split_manifest.json",
+  "split_manifest_sha256": "f846c7fee5071c1a2d7c14330e95cafb3100624ae73d55ccefc6f169a1a27c28",
+  "environment": {
+    "python": "3.13.13",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1"
+  },
+  "settings": {
+    "history_seconds": 60,
+    "horizon_seconds": 30,
+    "stride_seconds": 5,
+    "first_issue_time_s": 59,
+    "history_interval": "t-59 through t, inclusive",
+    "target_interval": "t+1 through t+30, inclusive",
+    "std_ddof": 0,
+    "scaling_applied": false
+  },
+  "feature_columns": [
+    "spo2_current",
+    "spo2_mean_60s",
+    "spo2_min_60s",
+    "spo2_std_60s",
+    "spo2_change_10s",
+    "spo2_change_30s",
+    "spo2_slope_60s",
+    "heart_rate_current",
+    "heart_rate_mean_60s",
+    "heart_rate_std_60s",
+    "heart_rate_change_10s",
+    "heart_rate_change_30s",
+    "heart_rate_slope_60s",
+    "respiratory_rate_current",
+    "respiratory_rate_mean_60s",
+    "respiratory_rate_std_60s",
+    "respiratory_rate_change_10s",
+    "respiratory_rate_change_30s",
+    "respiratory_rate_slope_60s"
+  ],
+  "feature_definitions": {
+    "spo2_current": {
+      "source_column": "SPO2",
+      "definition": "Value at issue time t",
+      "unit": "%"
+    },
+    "spo2_mean_60s": {
+      "source_column": "SPO2",
+      "definition": "Arithmetic mean of observations t-59 through t",
+      "unit": "%"
+    },
+    "spo2_min_60s": {
+      "source_column": "SPO2",
+      "definition": "Minimum of observations t-59 through t",
+      "unit": "%"
+    },
+    "spo2_std_60s": {
+      "source_column": "SPO2",
+      "definition": "Population standard deviation (ddof=0) of observations t-59 through t",
+      "unit": "SpO2 percentage points"
+    },
+    "spo2_change_10s": {
+      "source_column": "SPO2",
+      "definition": "Value at t minus value at t-10",
+      "unit": "SpO2 percentage points"
+    },
+    "spo2_change_30s": {
+      "source_column": "SPO2",
+      "definition": "Value at t minus value at t-30",
+      "unit": "SpO2 percentage points"
+    },
+    "spo2_slope_60s": {
+      "source_column": "SPO2",
+      "definition": "Ordinary least squares slope against seconds 0 through 59, with an intercept",
+      "unit": "SpO2 percentage points per second"
+    },
+    "heart_rate_current": {
+      "source_column": "Heart rate",
+      "definition": "Value at issue time t",
+      "unit": "beats/min"
+    },
+    "heart_rate_mean_60s": {
+      "source_column": "Heart rate",
+      "definition": "Arithmetic mean of observations t-59 through t",
+      "unit": "beats/min"
+    },
+    "heart_rate_std_60s": {
+      "source_column": "Heart rate",
+      "definition": "Population standard deviation (ddof=0) of observations t-59 through t",
+      "unit": "beats/min"
+    },
+    "heart_rate_change_10s": {
+      "source_column": "Heart rate",
+      "definition": "Value at t minus value at t-10",
+      "unit": "beats/min"
+    },
+    "heart_rate_change_30s": {
+      "source_column": "Heart rate",
+      "definition": "Value at t minus value at t-30",
+      "unit": "beats/min"
+    },
+    "heart_rate_slope_60s": {
+      "source_column": "Heart rate",
+      "definition": "Ordinary least squares slope against seconds 0 through 59, with an intercept",
+      "unit": "beats/min per second"
+    },
+    "respiratory_rate_current": {
+      "source_column": "Respiratory rate",
+      "definition": "Value at issue time t",
+      "unit": "breaths/min"
+    },
+    "respiratory_rate_mean_60s": {
+      "source_column": "Respiratory rate",
+      "definition": "Arithmetic mean of observations t-59 through t",
+      "unit": "breaths/min"
+    },
+    "respiratory_rate_std_60s": {
+      "source_column": "Respiratory rate",
+      "definition": "Population standard deviation (ddof=0) of observations t-59 through t",
+      "unit": "breaths/min"
+    },
+    "respiratory_rate_change_10s": {
+      "source_column": "Respiratory rate",
+      "definition": "Value at t minus value at t-10",
+      "unit": "breaths/min"
+    },
+    "respiratory_rate_change_30s": {
+      "source_column": "Respiratory rate",
+      "definition": "Value at t minus value at t-30",
+      "unit": "breaths/min"
+    },
+    "respiratory_rate_slope_60s": {
+      "source_column": "Respiratory rate",
+      "definition": "Ordinary least squares slope against seconds 0 through 59, with an intercept",
+      "unit": "breaths/min per second"
+    }
+  },
+  "metadata_columns": [
+    "participant_id",
+    "partition",
+    "issue_time_s",
+    "history_start_s",
+    "history_end_s",
+    "forecast_start_s",
+    "forecast_end_s",
+    "target_mean_spo2"
+  ],
+  "target_column": "target_mean_spo2",
+  "target_definition": "Mean SpO2 (%) over the 30 observations after issue time",
+  "exports": {
+    "train": {
+      "filename": "train.csv",
+      "participant_count": 12,
+      "example_count": 19107,
+      "sha256": "4a371966a54280ac492c09aca01e2ee22df4a2cfeae13019f33406e5fd9c3124"
+    },
+    "validation": {
+      "filename": "validation.csv",
+      "participant_count": 4,
+      "example_count": 6477,
+      "sha256": "6b94473390ec857f75cabdf4f0d9f2fcd457a38771cef9e040d070bf82e0281e"
+    },
+    "test": {
+      "filename": "test.csv",
+      "participant_count": 4,
+      "example_count": 5786,
+      "sha256": "17a348fe1e8ff45ac7938fbc53de2378e9c1c6ae776093b21c173d1fb8a2ce00"
+    }
+  },
+  "examples_by_participant": {
+    "0609b": 1587,
+    "0610b": 1424,
+    "0613b": 2070,
+    "0620a": 1378,
+    "0620b": 1782,
+    "0623a": 1773,
+    "0624a": 1570,
+    "0624b": 1673,
+    "0626a": 1503,
+    "0626b": 1618,
+    "0627a": 1457,
+    "0714a": 1398,
+    "0714b": 1592,
+    "0715a": 1315,
+    "0717b": 1552,
+    "0721b": 1799,
+    "0722a": 1371,
+    "0722b": 1544,
+    "0723b": 1227,
+    "0728b": 1737
+  },
+  "total_examples": 31370,
+  "quality_check": {
+    "status": "pass",
+    "checked_at_utc": "2026-11-15T23:43:48.559026+00:00",
+    "summary": {
+      "csv_files_found": 20,
+      "csv_files_profiled": 20,
+      "total_rows": 158580,
+      "total_bytes": 6771096,
+      "missing_cells": 0,
+      "duplicate_complete_rows": 0,
+      "non_numeric_cells": 0,
+      "non_finite_cells": 0,
+      "outside_mathematical_bounds": 0,
+      "publisher_md5_matches": 20,
+      "invalid_time_cells": 0,
+      "duplicate_timestamp_rows": 0,
+      "backward_steps": 0,
+      "gaps_over_one_second": 0,
+      "recording_hours_at_assumed_1hz": 44.05
+    }
+  },
+  "limitations": [
+    "The paper reports forward filling before release; no per-observation imputation mask is available. Zero missing cells does not establish complete original sensor measurements.",
+    "These are healthy-volunteer terrestrial chamber records, not astronaut telemetry or adjudicated clinical events.",
+    "Overlapping windows are correlated; all examples for a participant remain in one partition.",
+    "Only features and targets were prepared; no model fitting, evaluation or predictions were performed."
+  ]
+}

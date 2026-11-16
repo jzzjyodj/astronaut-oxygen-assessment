@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "selected_at_utc": "2026-11-15T23:55:16.993781+00:00",
+  "selected_method": "ridge",
+  "selection_based_on": "validation participant-average MAE only",
+  "selection_rule": "Choose Ridge only when its validation MAE is lower by more than the numerical tie tolerance; otherwise choose persistence.",
+  "tie_tolerance_percentage_points": 1e-12,
+  "selection_stage": "Saved before test targets are loaded",
+  "method_configuration": {
+    "persistence": {
+      "prediction": "spo2_current"
+    },
+    "ridge": {
+      "scaler": "StandardScaler",
+      "with_mean": true,
+      "with_std": true,
+      "alpha": 1.0,
+      "solver": "svd",
+      "fit_intercept": true
+    }
+  },
+  "feature_columns": [
+    "spo2_current",
+    "spo2_mean_60s",
+    "spo2_min_60s",
+    "spo2_std_60s",
+    "spo2_change_10s",
+    "spo2_change_30s",
+    "spo2_slope_60s",
+    "heart_rate_current",
+    "heart_rate_mean_60s",
+    "heart_rate_std_60s",
+    "heart_rate_change_10s",
+    "heart_rate_change_30s",
+    "heart_rate_slope_60s",
+    "respiratory_rate_current",
+    "respiratory_rate_mean_60s",
+    "respiratory_rate_std_60s",
+    "respiratory_rate_change_10s",
+    "respiratory_rate_change_30s",
+    "respiratory_rate_slope_60s"
+  ],
+  "target_column": "target_mean_spo2",
+  "target_definition": "Mean SpO2 (%) over the 30 observations after issue time",
+  "training_participants": [
+    "0609b",
+    "0620a",
+    "0623a",
+    "0624a",
+    "0624b",
+    "0626b",
+    "0627a",
+    "0714b",
+    "0717b",
+    "0721b",
+    "0722a",
+    "0728b"
+  ],
+  "training_example_count": 19107,
+  "fit_weighting": "Equal weight per training example; no refit on validation or test",
+  "input_checksums": {
+    "split_manifest_sha256": "f846c7fee5071c1a2d7c14330e95cafb3100624ae73d55ccefc6f169a1a27c28",
+    "forecast_preparation_sha256": "5c7288a08066c848ec83e5be668d82b4c888b7eecb84e8bbc95cc4dedff0acce",
+    "datasets": {
+      "train": "4a371966a54280ac492c09aca01e2ee22df4a2cfeae13019f33406e5fd9c3124",
+      "validation": "6b94473390ec857f75cabdf4f0d9f2fcd457a38771cef9e040d070bf82e0281e",
+      "test": "17a348fe1e8ff45ac7938fbc53de2378e9c1c6ae776093b21c173d1fb8a2ce00"
+    }
+  },
+  "ridge_model": {
+    "filename": "models/ridge_pipeline.pkl",
+    "sha256": "1d4829d96acbedf440fd318475c050b2ceb647b1867008f824a768c3fe458048"
+  },
+  "validation": {
+    "persistence": {
+      "participant_average_mae": 0.5768297236469211,
+      "participant_count": 4,
+      "example_count": 6477,
+      "participants": [
+        {
+          "participant_id": "0613b",
+          "example_count": 2070,
+          "mae": 0.5529388083735911
+        },
+        {
+          "participant_id": "0620b",
+          "example_count": 1782,
+          "mae": 0.7580508791619894
+        },
+        {
+          "participant_id": "0714a",
+          "example_count": 1398,
+          "mae": 0.4971387696709581
+        },
+        {
+          "participant_id": "0723b",
+          "example_count": 1227,
+          "mae": 0.49919043738114577
+        }
+      ]
+    },
+    "ridge": {
+      "participant_average_mae": 0.5020025947641867,
+      "participant_count": 4,
+      "example_count": 6477,
+      "participants": [
+        {
+          "participant_id": "0613b",
+          "example_count": 2070,
+          "mae": 0.4518671229707476
+        },
+        {
+          "participant_id": "0620b",
+          "example_count": 1782,
+          "mae": 0.6646966041881349
+        },
+        {
+          "participant_id": "0714a",
+          "example_count": 1398,
+          "mae": 0.43259027997418187
+        },
+        {
+          "participant_id": "0723b",
+          "example_count": 1227,
+          "mae": 0.45885637192368234
+        }
+      ]
+    },
+    "ridge_mae_improvement": 0.07482712888273435
+  },
+  "environment": {
+    "python": "3.13.13",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "scikit_learn": "1.9.1"
+  }
+}

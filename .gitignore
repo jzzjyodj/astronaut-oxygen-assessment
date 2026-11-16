@@ -237,7 +237,7 @@ dist/
 # Notebook checkpoints
 .ipynb_checkpoints/
 
-# All datasets stay local, including future subdirectories
+# Datasets are ignored by default; approved handover assets are allowlisted below
 /data/**
 !/data/**/
 !/data/**/.gitkeep
@@ -266,9 +266,10 @@ dist/
 !/web/public/data/README.md
 !/web/public/data/guidance.json
 
-# Fitted models stay local
+# Fitted models are ignored by default except the approved handover model
 /artifacts/models/*
 !/artifacts/models/.gitkeep
+/artifacts/test-tmp/
 
 # Frontend dependencies and generated builds
 node_modules/
@@ -287,3 +288,32 @@ Thumbs.db
 # Local reference notes
 /docs/references/**/*.md
 /docs/reference/**/*.md
+
+# Approved fixed HAPP handover assets: commit directly for teammate clones
+!/data/raw/0609b.csv
+!/data/raw/0610b.csv
+!/data/raw/0613b.csv
+!/data/raw/0620a.csv
+!/data/raw/0620b.csv
+!/data/raw/0623a.csv
+!/data/raw/0624a.csv
+!/data/raw/0624b.csv
+!/data/raw/0626a.csv
+!/data/raw/0626b.csv
+!/data/raw/0627a.csv
+!/data/raw/0714a.csv
+!/data/raw/0714b.csv
+!/data/raw/0715a.csv
+!/data/raw/0717b.csv
+!/data/raw/0721b.csv
+!/data/raw/0722a.csv
+!/data/raw/0722b.csv
+!/data/raw/0723b.csv
+!/data/raw/0728b.csv
+!/data/raw/happ_metadata.json
+!/data/processed/forecasting/train.csv
+!/data/processed/forecasting/validation.csv
+!/data/processed/forecasting/test.csv
+!/data/processed/predictions/validation.csv
+!/data/processed/predictions/test.csv
+!/artifacts/models/ridge_pipeline.pkl
